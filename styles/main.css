@@ -1,0 +1,10 @@
+.main {
+  height: 42%;
+}
+/* 헤더랑 메인이랑 퍼센트를 합치면 50%이 됨 */
+
+@media (max-width: 768px){
+  .main {
+    height: 45%;
+  }
+}

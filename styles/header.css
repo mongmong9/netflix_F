@@ -1,0 +1,56 @@
+.header {
+  width: 100%;
+  height: 8%;
+}
+
+.header_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: calc((100% - 90%)/2);
+  padding-right: calc((100% - 90%)/2);
+}
+/* 로고배치를 위해 디스플레이를 플렉스로하고 양옆으로 배치하기위해 스페이스 비트윈을 줌 */
+  /* 정해진 값은 아니고 배치상 보기좋은 수치를 찾는것 */
+
+.logo {
+  display: inline-block; 
+  /* 높이가 만들어져야해서  인라인 블럭을 줌*/
+  background-image: url('../images/Logo.svg');
+  background-repeat: no-repeat;
+  /* 로고가 여러게 노출되지않고 딱 하나만 보일 수 잇도록 */
+  background-size: contain;
+  /* 비율에 맞게 들어가게하려고 컨테인을 씀 */
+  width: 140px;
+  height: 38px;
+}
+
+.header_button_wrapper {
+  display: flex;
+  column-gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 5%;
+  }
+
+  .header_inner {
+    padding: 20px 25px;
+  }
+
+  .logo {
+    width: 80px;
+    height: 22px;
+  }
+
+  .header_button_wrapper {
+    column-gap: 16px;
+  }
+
+  .header .select_btn {
+    height: 30px;
+  }
+}

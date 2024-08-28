@@ -1,0 +1,93 @@
+.promotion_container {
+  color: #fff;
+  display: flex;
+   /* 정렬하고 배치를 편하게 하기 위해서 플렉스를 쓰는게 편함 */
+  flex-flow: column nowrap;
+  /* 기본은 가로로 길게 늘어지기 때문에 */
+  /* 배열을 세로로 바꿔주려고 이렇게 함 */
+  justify-content: center;
+  align-items: center;
+  row-gap: 28px;
+  margin-top: 57px;
+}
+
+.promotion_container li {
+  margin: 0;
+  word-break: keep-all;
+  /* 화면에 단어가 넘치거나 할때 유지여부 설정 */
+  text-align: center;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  list-style: none;
+}
+
+
+.promotion_container li:nth-of-type(1) {
+  width: 518px;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 72px;
+  letter-spacing: -0.03px;
+}
+
+/* nth-of-type를 쓰면 따로 클래스를 만들지 않아도 각자 지정해서 설정할 수 있음 */
+
+.promotion_container li:nth-of-type(2) {
+  width: 520px;
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.55);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: -0.01px;
+}
+
+.promotion_container li:nth-of-type(3) {
+  width: 306px;
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.55);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: -0.008px;
+}
+
+/* 네번째를 건너뛰는 이유는 인풋/버튼 클래스를 따로 적용할거라서 */
+
+.promotion_container li:nth-of-type(5) {
+  width: 322px;
+  text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.55);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.008px;
+}
+
+@media (max-width: 768px) {
+
+  .promotion_container li:nth-of-type(1) {
+    width: 339px;
+    font-size: 34px;
+    line-height: 40px;
+  }
+
+  .promotion_container li:nth-of-type(2) {
+    width: 259px;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: -0.009px;
+  }
+
+  .promotion_container li:nth-of-type(3) {
+    width: 264px;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.007px;
+  }
+
+  .promotion_container li:nth-of-type(5) {
+    width: 339px;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.006px;
+  }
+}
+
+/* 절대값은 아니라서 보면서 세부수치를 조정하면 됨 */

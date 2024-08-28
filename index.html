@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>넷플릭스</title>
+   <link rel="icon" href="./images/favicon.ico">
+   <link rel="stylesheet" href="styles/container.css">
+   <link rel="stylesheet" href="styles/header.css">
+   <link rel="stylesheet" href="styles/button.css">
+   <link rel="stylesheet" href="styles/select.css">
+   <link rel="stylesheet" href="styles/main.css">
+   <link rel="stylesheet" href="styles/promotion.css">
+   <link rel="stylesheet" href="styles/input_email.css">
+   <link rel="stylesheet" href="styles/footer.css">
+   <link rel="stylesheet" href="styles/font.css">
+</head>
+
+<body>
+   <div role="none" class="container">
+      <!-- 전체를 감싸는 컨테이너 -->
+       <!-- 디브태그 적용시 role을 적어주는 이유는 역할을 주기 위해 그래야 스크린리더가 읽어줄때 건너가지 않음 -->
+      <header class="header">
+         <div role="none" class="header_inner">
+            <a href="/" class="logo"></a>
+            <!-- a태그를 쓴이유는 로고를 누르면 홈으로 가게하려고 -->
+            <div role="none" class="header_button_wrapper">
+               <select class="select_btn" name="select_lang" id="select_lang">
+                  <option value="korea">한국어</option>
+                  <option value="engilsh">English</option>
+               </select>
+               <button class="btn" type="button">로그인</button>
+               <!-- 버튼으로 안해주면 submit으로 기본값이 들어가니까 타입을 버튼으로 지정해줘야함 -->
+            </div>
+         </div>
+      </header>
+    <!-- 컨테이너 안에 헤더안에 로고, 언어,로그인 버튼 넣기
+     나중에 좌/우로 방향위치시키기 위해서 div로 박스를 한번 더 나눔 -->
+
+      <main class="main">
+         <ul class="promotion_container">
+            <li>영화, TV 프로그램을 무제한으로.</li>
+            <li>다양한 디바이스에서 시청하세요. 언제든 해지하실 수 있습니다.</li>
+            <li>시청할 준비가 되셨나요? 멤버십을 등록하거나 재시작하려면 이메일 주소를 입력하세요.</li>
+            <li role="none" class="input_email_container">
+               <div role="none" class="input_email_wrapper">
+                  <input type="email" class="user_email" id="user_email" data-val="focus" placeholder="이메일 주소">
+
+                  <button class="btn_arrow btn_arrow_normal_right" type="button">30일 무료 이용 
+                     <!-- 글자 다음에 한줄띠고 이미지를 넣어야지 들어감 -->
+                     <img src="images/Arrow_right.svg" alt="">
+                  </button>
+               </div>
+            </li>
+            <li>신규 회원만 이 프로모션을 이용하실 수 있습니다.</li>
+         </ul>
+         <!-- 디브태그를 써도 괜찮지만 시맨틱마크업을 위해서 ul광li이를 쓰는게 좋음 -->
+          <!-- ul를 순서가 상관없는 걸 나열할때 쓰는거라서 -->
+          <!-- ol이 아닌 ul를 쓰는것 -->
+      </main>
+
+      <div role="none" class="divider"></div>
+      <!-- 푸터와 메인사이에 그라데이션을 자연스럽게 넣기위해서
+      공간을 줌 -->
+
+      <footer class="footer">
+         <div role="none" class="footer_ask_wrapper">
+            <div class="footer_ask">질문이 있으신가요&#63;</div>
+            <div class="footer_ask">문의 전화&#58; <a href="tel: +82-0-308-321-0058">00-308-321-0058</a></div>
+<!-- 
+            tel을써줘야 링크를 눌럿을때 전화를 바로 걸수잇음(모방일상) -->
+         </div>
+
+         <div role="link" class="footer_nav">
+            <a href="/">자주 묻는 질문</a>
+            <a href="/">고객센터</a>
+            <a href="/">계정</a>
+            <a href="/">미디어 센터</a>
+            <a href="/">투자 정보 &#40;<span lang="en-US">IR</span>&#41;</a>
+            <!-- &#40; 특수기호를 표현하는 방법 일반적인 키보드안의 특수기호는 오류가 날 수 잇어서 표기법으로 써야함 -->
+
+            <a href="/">입사 정보</a>
+            <a href="/"><span lang="en-US">Netflix</span> 지원 디바이스</a>
+            <a href="/">이용 약관</a>
+            <a href="/">개인정보</a>
+            <a href="/">쿠키 설정</a>
+            <a href="/">회사 정보</a>
+            <a href="/">문의하기</a>
+            <a href="/">속도 테스트</a>
+            <a href="/">법적 고지</a>
+            <a href="/"><span lang="en-US">Netflix</span> 오리지널</a>
+         </div>
+<!-- a태그를 쓰는 이유는 눌럿을때 각각의 페이지로 이동하기가 수훨하게 하기 위해서 -->
+
+         <select class="select_btn" name="select_lang" id="select_lang">
+            <option value="korea">한국어</option>
+            <option value="engilsh" lang="en-US">English</option>
+         </select>
+
+         <address class="footer_address">
+            <h3>Netflix 대한민국</h3>
+            <div>넷플릭스서비시스코리아 유한회사</div>
+            <div>통신판매업신고번호: 제2018-서울종로-0426호</div>
+            <div>전화번호: <a href="tel: +82-0-308-321-0058">00-308-321-0058</a></div>
+            <div>대표: 레지널드 숀 톰프슨</div>
+            <div>이메일 주소: <a href="mailto:korea@netflix.com">korea@netflix.com</a></div>
+            <!-- 띄어쓰기하면안됨 -->
+            <div>주소: 대한민국 서울특별시 종로구 우정국로 26, 센트로폴리스 A동 20층 우편번호 03161</div>
+            <div>사업자 등록번호: 165-87-00119</div>
+            <div>클라우드 호스팅: Amazon Web Services Inc.</div>
+            <div>공정거래위원회 웹사이트</div>
+         </address>
+      </footer>
+   </div>
+</body>
+
+</html>
